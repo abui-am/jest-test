@@ -31,6 +31,7 @@ function SearchPokemon() {
   useEffect(() => {
     dispatch(fetchPokemon());
   }, []);
+
   const search = () => {
     dispatch(searchPokemon(selectedType.value));
   };

@@ -1,19 +1,24 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 
 import pokemon from '../assets/pokemon.png';
 
-function Title() {
+function Title({ title }) {
   return (
     <Container>
       <Row>
         <Col lg={12} className="mt-4">
           <img src={pokemon} alt="pokemon" width={300} />
-          <h1>Pokemon App</h1>
+          {title}
         </Col>
       </Row>
     </Container>
   );
 }
+
+Title.propTypes = {
+  title: PropTypes.string.isRequired,
+};
 
 export default Title;

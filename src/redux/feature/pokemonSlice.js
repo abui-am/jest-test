@@ -60,7 +60,7 @@ export const counterSlice = createSlice({
       state.isLoading = false;
     },
     [fetchPokemon.rejected]: (state) => {
-      state.isLoading = false;
+      state.isLoading = false ;
     },
     [searchPokemon.pending]: (state) => {
       state.isLoading = true;
